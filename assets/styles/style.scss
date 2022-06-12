@@ -28,6 +28,10 @@ h1{
     border: 2px solid var(--Very-Dark-Violet);
     padding: toRem(12) toRem(26);
 
+    @media screen and (max-width: toRem(632)){
+        padding: toRem(10) toRem(17);
+    }
+
     &:hover{
        color: var(--Very-Light-Gray) !important;
        background-color: var(--Very-Dark-Violet);

@@ -53,6 +53,18 @@ header .nav-container nav ul {
   gap: 1.5625rem;
 }
 
+@media screen and (max-width: 39.5rem) {
+  header .nav-container nav ul {
+    gap: 0.9375rem;
+  }
+}
+
+@media screen and (max-width: 34.6875rem) {
+  header .nav-container nav ul {
+    display: none;
+  }
+}
+
 header .nav-container nav ul a {
   color: var(--Dark-Grayish-Violet);
   font-size: 0.8125rem;
@@ -64,6 +76,20 @@ header .nav-container nav ul a {
 
 header .nav-container nav ul a:hover {
   color: var(--Very-Dark-Violet);
+}
+
+header .nav-container nav .open-btn {
+  display: none;
+}
+
+@media screen and (max-width: 34.6875rem) {
+  header .nav-container nav .open-btn {
+    display: block;
+  }
+}
+
+header .nav-container nav #close {
+  display: none;
 }
 
 header .hero-content {
@@ -82,7 +108,7 @@ header .hero-content {
         grid-template-columns: 1fr;
     -ms-grid-rows: (1fr)[2];
         grid-template-rows: repeat(2, 1fr);
-        grid-template-areas: "hero-image" "hero-text";
+        grid-template-areas: "hero-image" "hero-text";
   }
 }
 
@@ -223,6 +249,12 @@ h1 {
   color: var(--Very-Dark-Violet) !important;
   border: 2px solid var(--Very-Dark-Violet);
   padding: 0.75rem 1.625rem;
+}
+
+@media screen and (max-width: 39.5rem) {
+  .border-black {
+    padding: 0.625rem 1.0625rem;
+  }
 }
 
 .border-black:hover {
