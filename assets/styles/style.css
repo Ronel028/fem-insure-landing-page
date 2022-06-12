@@ -41,6 +41,7 @@ header .nav-container nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  z-index: 999;
 }
 
 header .nav-container nav ul {
@@ -61,11 +62,37 @@ header .nav-container nav ul {
 
 @media screen and (max-width: 34.6875rem) {
   header .nav-container nav ul {
-    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2.625rem;
+    height: 100vh;
+    background: url("../images/bg-pattern-mobile-nav.svg"), var(--Dark-Violet);
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-size: contain;
+    padding: 3.375rem 1.4375rem 0rem;
+    position: fixed;
+    top: 5.3125rem;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
   }
 }
 
-header .nav-container nav ul a {
+@media screen and (max-width: 34.6875rem) {
+  header .nav-container nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+header .nav-container nav ul li a {
   color: var(--Dark-Grayish-Violet);
   font-size: 0.8125rem;
   font-weight: var(--font-bold);
@@ -74,7 +101,14 @@ header .nav-container nav ul a {
   transition: all 300ms ease-in-out;
 }
 
-header .nav-container nav ul a:hover {
+@media screen and (max-width: 34.6875rem) {
+  header .nav-container nav ul li a {
+    color: var(--Very-Light-Gray);
+    font-size: 0.9375rem;
+  }
+}
+
+header .nav-container nav ul li a:hover {
   color: var(--Very-Dark-Violet);
 }
 
@@ -254,6 +288,16 @@ h1 {
 @media screen and (max-width: 39.5rem) {
   .border-black {
     padding: 0.625rem 1.0625rem;
+  }
+}
+
+@media screen and (max-width: 34.6875rem) {
+  .border-black {
+    color: var(--Very-Light-Gray) !important;
+    border: 2px solid var(--Very-Light-Gray);
+    width: 100%;
+    display: block;
+    text-align: center;
   }
 }
 
